@@ -47,8 +47,7 @@
   
   <button  onclick="
   
-  // const randomNumber=Math.random();
-  randomNumber=Math.random();
+  const randomNumber=Math.random();
 
   if(randomNumber>=0 && randomNumber<1/3)
     {
@@ -65,11 +64,13 @@
   
     }
 
+  let result='';
+
      if(computerMove==='rock')
      {
       result='you win'
      }
-     else if(computerMove==='Paper')
+     else if(computerMove==='paper')
      {
       result='tie'
      }
@@ -83,7 +84,7 @@
   </button>
 
   <button onclick="
-  randomNumber=Math.random();
+ const  randomNumber=Math.random();
   
   if(randomNumber>=0 && randomNumber<1/3)
     {
@@ -99,12 +100,14 @@
        computerMove='scissors';
   
     }
-    console.log(computerMove);
+
+    let result='';
+
      if(computerMove==='rock')
      {
       result='you lose'
      }
-     else if(computerMove==='Paper')
+     else if(computerMove==='paper')
      {
       result='you win'
      }
@@ -112,7 +115,7 @@
      {
       result='tie'
      }
-     alert(`you picked rock.computerPicked${computerMove}.${result}`);
+     alert(`you picked scissors.computerPicked${computerMove}.${result}`);
     ">
     Scissors
   </button>

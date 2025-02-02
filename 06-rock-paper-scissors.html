@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="rock-paper-scissors-style.css">
 </head>
 <body>
   <p>Rock Paper Scissors</p>
@@ -11,17 +12,17 @@
   <button onclick="
  
    playGame('rock')
-  ">
+  " class="move-button">
 
-   Rock
+   <img src="image/rock-emoji.png" alt="" class="move-icon">
 
   </button>
   
   <button  onclick="
 
     playGame('paper')
-    ">
-    Paper
+    " class="move-button">
+    <img src="image/paper-emoji.png" alt="" class="move-icon">
   </button>
 
   <button onclick="
@@ -29,10 +30,10 @@
     playGame('scissors')
 
     
-    ">
-    Scissors
+    " class="move-button">
+    <img src="image/scissors-emoji.png" alt="" class="move-icon">
   </button>
-  <p class="js-result">
+  <p class="js-result result">
 
   </p>
   <p class="js-moves">
@@ -50,7 +51,7 @@
    score.ties=0;
    localStorage.removeItem('score');
    updateScore();
-   ">
+   " class="reset-score-btn">
     reset Score
    </button>
 
@@ -134,8 +135,10 @@ else if(playerMove==='rock')
  }
  localStorage.setItem('score',JSON.stringify(score));
 
- document.querySelector('.result').innerHTML=`${result}`;
- document.querySelector('.js-moves').innerHTML=`you ${result} computer ${computerMove}`;
+ document.querySelector('.result').innerHTML=`
+     you <img src="./image/${playerMove}-emoji.png" alt="" class="move-icon">
+     <img src="./image/${computerMove}-emoji.png" alt="" class="move-icon">
+     computer `;
 
 
  updateScore();
